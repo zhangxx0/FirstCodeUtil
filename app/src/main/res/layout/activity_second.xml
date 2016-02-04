@@ -17,6 +17,19 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="From Activity1:"/>
+
+    <Button
+        android:id="@+id/customviewbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义标题栏"/>
+
+    <Button
+        android:id="@+id/talkpagebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="聊天页面"/>
+
     <Button
         android:id="@+id/exitapp"
         android:layout_width="match_parent"

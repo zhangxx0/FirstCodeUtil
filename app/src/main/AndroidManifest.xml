@@ -17,6 +17,9 @@
         </activity>
 
         <activity android:name=".activity.AtySecond"/>
+        <activity android:name=".activity.AtyCustomTitle"/>
+        <activity android:name=".activity.AtyTalkPage"/>
+
     </application>
 
 </manifest>

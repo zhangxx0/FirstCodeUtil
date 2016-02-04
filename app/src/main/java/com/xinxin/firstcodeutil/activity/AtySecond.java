@@ -20,8 +20,8 @@ import com.xinxin.firstcodeutil.activitycollector.ActivityCollector;
  */
 public class AtySecond extends BaseActivity implements View.OnClickListener {
 
-    // 一键退出按钮
-    private Button exitapp;
+    // 一键退出按钮,自定义标题栏按钮,聊天页面
+    private Button exitapp,customviewbtn,talkpagebtn;
     private TextView fromactivity1;
 
     @Override
@@ -30,13 +30,17 @@ public class AtySecond extends BaseActivity implements View.OnClickListener {
         setContentView(R.layout.activity_second);
 
         exitapp = (Button) findViewById(R.id.exitapp);
+        customviewbtn = (Button) findViewById(R.id.customviewbtn);
         fromactivity1 = (TextView) findViewById(R.id.fromactivity1);
+        talkpagebtn = (Button) findViewById(R.id.talkpagebtn);
         exitapp.setOnClickListener(this);
+        customviewbtn.setOnClickListener(this);
+        talkpagebtn.setOnClickListener(this);
 
         Bundle b = getIntent().getExtras();
         Log.d("IntentExtra",b.getString("testStr"));
 
-        fromactivity1.setText("From Activity1:" + b.getString("testStr"));
+        fromactivity1.setText("From ActivityMain:" + b.getString("testStr"));
 
     }
 
@@ -45,6 +49,14 @@ public class AtySecond extends BaseActivity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.exitapp :
                 ActivityCollector.finishAll();
+                break;
+            case R.id.customviewbtn:
+                Intent intent = new Intent(this,AtyCustomTitle.class);
+                startActivity(intent);
+                break;
+            case R.id.talkpagebtn:
+                Intent intent1 = new Intent(this,AtyTalkPage.class);
+                startActivity(intent1);
                 break;
         }
     }
