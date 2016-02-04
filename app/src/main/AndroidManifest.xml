@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xinxin.firstcodeutil" >
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +21,27 @@
         <activity android:name=".activity.AtySecond"/>
         <activity android:name=".activity.AtyCustomTitle"/>
         <activity android:name=".activity.AtyTalkPage"/>
+        <activity android:name=".activity.AtyFunctions"/>
+        <activity android:name=".activity.AtyFragment"/>
+        <activity android:name=".activity.AtyNewsContent"/>
+        <activity android:name=".activity.AtyBroadcast"/>
+        <activity android:name=".activity.AtyOfflineLogin"/>
+        <activity android:name=".activity.AtyOfflineMain"/>
+        <activity android:name=".activity.AtyStorage"/>
+
+        <!--注册广播接收器-->
+        <receiver android:name=".broadcastreceiver.MyBroadcastReceiver">
+            <intent-filter android:priority="100">
+                <action android:name="com.xinxin.firstcodeutil.broadcastreceiver.MY_BROADCAST"/>
+            </intent-filter>
+        </receiver>
+        <!--强制下线广播接收器-->
+        <receiver android:name=".broadcastreceiver.ForceOfflineReceiver">
+            <intent-filter>
+                <action android:name="com.xinxin.firstcodeutil.broadcastreceiver.FORCE_ONLINE"/>
+            </intent-filter>
+        </receiver>
+
 
     </application>
 

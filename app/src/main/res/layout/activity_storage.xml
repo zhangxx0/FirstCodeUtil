@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="文件存储" />
+
+    <Button
+        android:id="@+id/storage_file_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="存储到文件" />
+
+    <Button
+        android:id="@+id/storage_file_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="从文件读取" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="SharedPreferences存储" />
+
+    <Button
+        android:id="@+id/storage_preferences_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="存储到SharedPreferences" />
+
+    <Button
+        android:id="@+id/storage_preferences_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="从SharedPreferences读取" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="SQLite存储" />
+
+    <Button
+        android:id="@+id/storage_lite_init"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="数据库初始化"/>
+
+    <Button
+        android:id="@+id/storage_lite_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="新增"/>
+    <Button
+        android:id="@+id/storage_lite_del"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除"/>
+    <Button
+        android:id="@+id/storage_lite_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改"/>
+    <Button
+        android:id="@+id/storage_lite_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询"/>
+
+</LinearLayout>

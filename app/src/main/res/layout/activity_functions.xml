@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="九大功能"
+        android:textSize="24sp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <Button
+            android:id="@+id/fragmentbtn"
+            android:layout_rowWeight="1"
+            android:text="Fragment" />
+        　　
+        <Button
+            android:id="@+id/storagetbtn"
+            android:layout_rowWeight="1"
+            android:text="Storage" />
+        　　　
+        <Button
+            android:id="@+id/receiverbtn"
+            android:layout_rowWeight="1"
+            android:text="Receiver" />
+
+
+
+        <Button
+            android:id="@+id/providerbtn"
+            android:layout_rowWeight="1"
+            android:text="Provider"/>
+
+        <Button
+            android:id="@+id/mediabtn"
+            android:layout_rowWeight="1"
+            android:text="Media" />
+
+        <Button
+            android:id="@+id/servicebtn"
+            android:layout_rowWeight="1"
+            android:text="Service" />
+
+
+        <Button
+            android:id="@+id/webbtn"
+            android:layout_rowWeight="1"
+            android:text="Web" />
+
+        <Button
+            android:id="@+id/locationbtn"
+            android:layout_rowWeight="1"
+            android:text="Location" />
+
+        <Button
+            android:id="@+id/senserbtn"
+            android:layout_rowWeight="1"
+            android:text="Senser" />
+    </GridLayout>
+
+
+</LinearLayout>

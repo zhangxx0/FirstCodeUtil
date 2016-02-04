@@ -31,6 +31,12 @@
         android:text="聊天页面"/>
 
     <Button
+        android:id="@+id/functionbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="9大功能模块"/>
+
+    <Button
         android:id="@+id/exitapp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

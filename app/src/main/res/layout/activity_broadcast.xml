@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/broadcast_normal_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送标准广播"/>
+
+    <Button
+        android:id="@+id/broadcast_ordered_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送有序广播"/>
+
+    <Button
+        android:id="@+id/broadcast_local_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送本地广播"/>
+
+    <Button
+        android:id="@+id/broadcast_force_offline_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="强制下线功能"/>
+
+</LinearLayout>
