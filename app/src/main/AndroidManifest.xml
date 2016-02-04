@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".page.AtySecond"/>
+        <activity android:name=".activity.AtySecond"/>
     </application>
 
 </manifest>

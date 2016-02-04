@@ -1,4 +1,4 @@
-package com.xinxin.firstcodeutil.page;
+package com.xinxin.firstcodeutil.activity;
 
 import android.content.Context;
 import android.content.Intent;

@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.xinxin.firstcodeutil.page.AtySecond;
+import com.xinxin.firstcodeutil.activity.AtySecond;
 
 /**
  * 阅读郭霖的第一行代码，将其中的一些实用的代码汇集与此；
