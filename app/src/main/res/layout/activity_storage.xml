@@ -14,13 +14,8 @@
         android:id="@+id/storage_file_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="存储到文件" />
+        android:text="文件的存储" />
 
-    <Button
-        android:id="@+id/storage_file_out"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="从文件读取" />
 
     <TextView
         android:layout_width="match_parent"
@@ -32,13 +27,8 @@
         android:id="@+id/storage_preferences_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="存储到SharedPreferences" />
+        android:text="SharedPreferences存储" />
 
-    <Button
-        android:id="@+id/storage_preferences_out"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="从SharedPreferences读取" />
 
 
     <TextView
@@ -73,5 +63,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="查询"/>
+
+    <TextView
+        android:id="@+id/storage_sqlite_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="sqlite query..."/>
 
 </LinearLayout>

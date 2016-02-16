@@ -3,6 +3,12 @@
     package="com.xinxin.firstcodeutil" >
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -28,6 +34,17 @@
         <activity android:name=".activity.AtyOfflineLogin"/>
         <activity android:name=".activity.AtyOfflineMain"/>
         <activity android:name=".activity.AtyStorage"/>
+        <activity android:name=".activity.AtyStorageFile"/>
+        <activity android:name=".activity.AtyStorageSharedPreferences"/>
+        <activity android:name=".activity.AtyProvider"/>
+        <activity android:name=".activity.AtyProviderContacts"/>
+        <activity android:name=".activity.AtyMedia"/>
+        <activity android:name=".activity.AtyNotification"/>
+        <activity android:name=".activity.AtyNotificationPending"/>
+        <activity android:name=".activity.AtySms"/>
+        <activity android:name=".activity.AtyAudio"/>
+        <activity android:name=".activity.AtyVideo"/>
+        <activity android:name=".activity.AtyChoosePic"/>
 
         <!--注册广播接收器-->
         <receiver android:name=".broadcastreceiver.MyBroadcastReceiver">
@@ -41,6 +58,13 @@
                 <action android:name="com.xinxin.firstcodeutil.broadcastreceiver.FORCE_ONLINE"/>
             </intent-filter>
         </receiver>
+
+        <!--内容提供器-->
+        <provider
+            android:authorities="com.xinxin.firstcodeutil.provider"
+            android:name="com.xinxin.firstcodeutil.provider.DatabaseProvider"
+            android:exported="true">
+        </provider>
 
 
     </application>

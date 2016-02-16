@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/shared_preferences_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Data"/>
+    
+    <Button
+        android:id="@+id/shared_preferences_restore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Restore Data"/>
+
+    <TextView
+        android:id="@+id/shared_preferences_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="show sharedPreferences..."/>
+</LinearLayout>
