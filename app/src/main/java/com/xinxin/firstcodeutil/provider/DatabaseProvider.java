@@ -18,8 +18,13 @@ import com.xinxin.firstcodeutil.db.MyDatabaseHelper;
  */
 public class DatabaseProvider extends ContentProvider {
 
+    /**
+     * Book表所有数据
+     */
     public static final int BOOK_DIR = 0;
-
+    /**
+     * Book表单条数据
+     */
     public static final int BOOK_ITEM = 1;
 
     public static final int CATEGORY_DIR = 2;
@@ -32,8 +37,10 @@ public class DatabaseProvider extends ContentProvider {
 
     private MyDatabaseHelper dbHelper;
 
+    // 可以访问的集合
     static {
         uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
+        // 权限|路径|自定义代码---match方法返回自定义代码
         uriMatcher.addURI(AUTHORITY, "book", BOOK_DIR);
         uriMatcher.addURI(AUTHORITY, "book/#", BOOK_ITEM);
         uriMatcher.addURI(AUTHORITY, "category", CATEGORY_DIR);
@@ -42,7 +49,7 @@ public class DatabaseProvider extends ContentProvider {
 
     @Override
     public boolean onCreate() {
-        dbHelper = new MyDatabaseHelper(getContext(), "BookStore.db", null, 2);
+        dbHelper = new MyDatabaseHelper(getContext(), "BookStore.db", null, 3);
         return true;
     }
 
@@ -56,6 +63,7 @@ public class DatabaseProvider extends ContentProvider {
                 cursor = db.query("Book", projection, selection, selectionArgs, null, null, sortOrder);
                 break;
             case BOOK_ITEM:
+                // getPathSegments ： 将URI权限之后的部分以/分割；
                 String bookId = uri.getPathSegments().get(1);
                 cursor = db.query("Book", projection, "id = ?", new String[] { bookId }, null, null,
                         sortOrder);

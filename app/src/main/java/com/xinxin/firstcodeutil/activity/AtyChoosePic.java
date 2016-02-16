@@ -56,9 +56,10 @@ public class AtyChoosePic extends BaseActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                imageUri = Uri.fromFile(outputImage);
+                imageUri = Uri.fromFile(outputImage); // 图片唯一地址
                 Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+
                 startActivityForResult(intent, TAKE_PHOTO);
             }
         });
@@ -96,7 +97,7 @@ public class AtyChoosePic extends BaseActivity {
                     intent.setDataAndType(imageUri, "image/*");
                     intent.putExtra("scale", true);
                     intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-                    startActivityForResult(intent, CROP_PHOTO);
+                    startActivityForResult(intent, CROP_PHOTO); // 启动裁剪程序
                 }
                 break;
             case CROP_PHOTO:

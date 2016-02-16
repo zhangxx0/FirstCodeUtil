@@ -38,8 +38,9 @@ public class AtyStorageSharedPreferences extends BaseActivity implements View.On
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.shared_preferences_save:
-                // 保存到SharedPreferences
-                SharedPreferences.Editor editor = getPreferences(MODE_PRIVATE).edit();
+                // 保存到SharedPreferences 第一行没有指定名字，导致无法获取；
+                // SharedPreferences.Editor editor = getPreferences(MODE_PRIVATE).edit();
+                SharedPreferences.Editor editor = getSharedPreferences("data",MODE_PRIVATE).edit();
                 editor.putString("name", "Tom");
                 editor.putInt("age", 27);
                 editor.putBoolean("married", false);
@@ -50,6 +51,8 @@ public class AtyStorageSharedPreferences extends BaseActivity implements View.On
                 // 从SharedPreferences取值
 
                 // 这里并没有取到相应的值？？？这是什么情况？？？
+                // 2016年2月16日14:28:31 进行错误的查找
+                //  保存的时候没有指定名字,如上；OK
                 SharedPreferences pref = getSharedPreferences("data", MODE_PRIVATE);
                 String name = pref.getString("name", "");
                 int age = pref.getInt("age", 0);

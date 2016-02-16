@@ -59,7 +59,7 @@
             </intent-filter>
         </receiver>
 
-        <!--内容提供器-->
+        <!--SQLite数据库 内容提供器-->
         <provider
             android:authorities="com.xinxin.firstcodeutil.provider"
             android:name="com.xinxin.firstcodeutil.provider.DatabaseProvider"

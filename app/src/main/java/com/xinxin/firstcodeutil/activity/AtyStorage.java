@@ -54,7 +54,7 @@ public class AtyStorage extends BaseActivity implements View.OnClickListener {
         storage_lite_edit.setOnClickListener(this);
         storage_lite_select.setOnClickListener(this);
 
-        myDatabaseHelper = new MyDatabaseHelper(this, "BookStore.db", null, 1);
+        myDatabaseHelper = new MyDatabaseHelper(this, "BookStore.db", null, 3);
 
 
     }
