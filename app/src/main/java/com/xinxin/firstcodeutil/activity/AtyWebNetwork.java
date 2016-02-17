@@ -14,6 +14,8 @@ import com.xinxin.firstcodeutil.BaseActivity;
 import com.xinxin.firstcodeutil.R;
 import com.xinxin.firstcodeutil.handler.ContentHandler;
 import com.xinxin.firstcodeutil.model.App;
+import com.xinxin.firstcodeutil.util.HttpCallbackListener;
+import com.xinxin.firstcodeutil.util.HttpUtil;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -74,9 +76,28 @@ public class AtyWebNetwork extends BaseActivity implements View.OnClickListener 
     public void onClick(View v) {
         if (v.getId() == R.id.network_send_request) {
             // 使用各种方法获取返回值
-            sendRequestWithHttpURLConnection();
+//            sendRequestWithHttpURLConnection();
+            sendRequestWithHttpUtil();
 
         }
+    }
+
+    private void sendRequestWithHttpUtil() {
+        String address = "http://www.baidu.com";
+        HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {
+            @Override
+            public void onFinish(String response) {
+                Message msg = new Message();
+                msg.what = SHOW_RESPONSE;
+                msg.obj = response.toString();
+                handler.sendMessage(msg);
+            }
+
+            @Override
+            public void onError(Exception e) {
+
+            }
+        });
     }
 
 
