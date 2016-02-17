@@ -46,6 +46,9 @@
         <activity android:name=".activity.AtyVideo"/>
         <activity android:name=".activity.AtyChoosePic"/>
 
+        <activity android:name=".activity.AtyService"/>
+        <activity android:name=".activity.AtyHandler"/>
+
         <!--注册广播接收器-->
         <receiver android:name=".broadcastreceiver.MyBroadcastReceiver">
             <intent-filter android:priority="100">
@@ -58,6 +61,8 @@
                 <action android:name="com.xinxin.firstcodeutil.broadcastreceiver.FORCE_ONLINE"/>
             </intent-filter>
         </receiver>
+        <!--定时Service接收器-->
+        <receiver android:name=".broadcastreceiver.AlarmReceiver"/>
 
         <!--SQLite数据库 内容提供器-->
         <provider
@@ -65,6 +70,11 @@
             android:name="com.xinxin.firstcodeutil.provider.DatabaseProvider"
             android:exported="true">
         </provider>
+
+        <!--注册service-->
+        <service android:name=".service.MyService"/>
+        <service android:name=".service.MyIntentService"/>
+        <service android:name=".service.LongRunningService"/>
 
 
     </application>

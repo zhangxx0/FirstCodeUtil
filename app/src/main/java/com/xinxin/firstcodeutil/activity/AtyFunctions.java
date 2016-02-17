@@ -55,6 +55,8 @@ public class AtyFunctions extends BaseActivity implements View.OnClickListener {
                 startActivity(i4);
                 break;
             case R.id.servicebtn:
+                Intent i5 = new Intent(this,AtyService.class);
+                startActivity(i5);
                 break;
             case R.id.webbtn:
                 break;
