@@ -10,15 +10,12 @@ import com.xinxin.firstcodeutil.R;
 
 /**
  * Created by xinxin on 2016/2/4.
- *
+ * <p/>
  * 功能页面
- *
  */
 public class AtyFunctions extends BaseActivity implements View.OnClickListener {
 
-    private Button fragmentbtn,storagetbtn,receiverbtn
-            ,providerbtn,mediabtn,servicebtn
-            ,webbtn,locationbtn,senserbtn;
+    private Button fragmentbtn, storagetbtn, receiverbtn, providerbtn, mediabtn, servicebtn, webbtn, locationbtn, senserbtn;
 
 
     @Override
@@ -35,27 +32,27 @@ public class AtyFunctions extends BaseActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.fragmentbtn:
-                Intent i0 = new Intent(this,AtyFragment.class);
+                Intent i0 = new Intent(this, AtyFragment.class);
                 startActivity(i0);
                 break;
             case R.id.storagetbtn:
-                Intent i1 = new Intent(this,AtyStorage.class);
+                Intent i1 = new Intent(this, AtyStorage.class);
                 startActivity(i1);
                 break;
             case R.id.receiverbtn:
-                Intent i2 = new Intent(this,AtyBroadcast.class);
+                Intent i2 = new Intent(this, AtyBroadcast.class);
                 startActivity(i2);
                 break;
             case R.id.providerbtn:
-                Intent i3 = new Intent(this,AtyProvider.class);
+                Intent i3 = new Intent(this, AtyProvider.class);
                 startActivity(i3);
                 break;
             case R.id.mediabtn:
-                Intent i4 = new Intent(this,AtyMedia.class);
+                Intent i4 = new Intent(this, AtyMedia.class);
                 startActivity(i4);
                 break;
             case R.id.servicebtn:
-                Intent i5 = new Intent(this,AtyService.class);
+                Intent i5 = new Intent(this, AtyService.class);
                 startActivity(i5);
                 break;
             case R.id.webbtn:
@@ -63,6 +60,8 @@ public class AtyFunctions extends BaseActivity implements View.OnClickListener {
                 startActivity(i6);
                 break;
             case R.id.locationbtn:
+                Intent i7 = new Intent(this, AtyLocation.class);
+                startActivity(i7);
                 break;
             case R.id.senserbtn:
                 break;
@@ -79,7 +78,7 @@ public class AtyFunctions extends BaseActivity implements View.OnClickListener {
         servicebtn = (Button) findViewById(R.id.servicebtn);
         webbtn = (Button) findViewById(R.id.webbtn);
         locationbtn = (Button) findViewById(R.id.locationbtn);
-        senserbtn  = (Button) findViewById(R.id.senserbtn);
+        senserbtn = (Button) findViewById(R.id.senserbtn);
 
         fragmentbtn.setOnClickListener(this);
         storagetbtn.setOnClickListener(this);

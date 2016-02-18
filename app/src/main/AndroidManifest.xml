@@ -12,6 +12,9 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -54,6 +57,9 @@
         <activity android:name=".activity.AtyWeb"/>
         <activity android:name=".activity.AtyWebView"/>
         <activity android:name=".activity.AtyWebNetwork"/>
+
+        <activity android:name=".activity.AtyLocation"/>
+        <activity android:name=".activity.AtyLocationPosition"/>
 
         <!--注册广播接收器-->
         <receiver android:name=".broadcastreceiver.MyBroadcastReceiver">
