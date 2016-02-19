@@ -64,6 +64,8 @@ public class AtyFunctions extends BaseActivity implements View.OnClickListener {
                 startActivity(i7);
                 break;
             case R.id.senserbtn:
+                Intent i8 = new Intent(this, AtySensor.class);
+                startActivity(i8);
                 break;
         }
 

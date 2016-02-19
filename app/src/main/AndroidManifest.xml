@@ -77,6 +77,8 @@
         <activity android:name=".activity.AtyLocationPosition"/>
         <activity android:name=".activity.AtyLocationBaiduMap"/>
 
+        <activity android:name=".activity.AtySensor"/>
+
         <!--注册广播接收器-->
         <receiver android:name=".broadcastreceiver.MyBroadcastReceiver">
             <intent-filter android:priority="100">
