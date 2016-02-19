@@ -3,6 +3,7 @@ package com.xinxin.firstcodeutil.activity;
 import android.os.Bundle;
 
 import com.baidu.mapapi.SDKInitializer;
+import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.MapView;
 import com.xinxin.firstcodeutil.BaseActivity;
 import com.xinxin.firstcodeutil.R;
@@ -15,6 +16,7 @@ import com.xinxin.firstcodeutil.R;
  */
 public class AtyLocationBaiduMap extends BaseActivity {
     MapView mMapView = null;
+    BaiduMap mBaiduMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,16 @@ public class AtyLocationBaiduMap extends BaseActivity {
         setContentView(R.layout.activity_location_baidu_map);
         //获取地图控件引用
         mMapView = (MapView) findViewById(R.id.bmapView);
+        mBaiduMap = mMapView.getMap();
+
+        //普通地图
+        // mBaiduMap.setMapType(BaiduMap.MAP_TYPE_NORMAL);
+
+        //卫星地图
+        mBaiduMap.setMapType(BaiduMap.MAP_TYPE_SATELLITE);
+
+        //空白地图, 基础地图瓦片将不会被渲染。在地图类型中设置为NONE，将不会使用流量下载基础地图瓦片图层。使用场景：与瓦片图层一起使用，节省流量，提升自定义瓦片图下载速度。
+        // mBaiduMap.setMapType(BaiduMap.MAP_TYPE_NONE);
     }
 
     @Override
