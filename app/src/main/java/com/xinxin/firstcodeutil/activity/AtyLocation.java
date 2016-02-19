@@ -39,7 +39,8 @@ public class AtyLocation extends BaseActivity implements View.OnClickListener {
                 startActivity(i);
                 break;
             case R.id.position_baidumap:
-
+                Intent i2 = new Intent(this, AtyLocationBaiduMap.class);
+                startActivity(i2);
                 break;
             default:
                 break;

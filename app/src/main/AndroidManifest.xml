@@ -15,12 +15,27 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
+    <!--百度地图权限 （少两个）-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+
+        <!--百度地图密钥-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="iHA6cUg2i0mlFzkQoDEXghjE" />
+
         <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -60,6 +75,7 @@
 
         <activity android:name=".activity.AtyLocation"/>
         <activity android:name=".activity.AtyLocationPosition"/>
+        <activity android:name=".activity.AtyLocationBaiduMap"/>
 
         <!--注册广播接收器-->
         <receiver android:name=".broadcastreceiver.MyBroadcastReceiver">
