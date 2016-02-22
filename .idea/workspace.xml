@@ -98,10 +98,9 @@
       <file leaf-file-name="HttpUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xinxin/firstcodeutil/util/HttpUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71090907">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6490909">
+              <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
               <folding>
-                <element signature="e#744#2408#0" expanded="true" />
                 <element signature="e#2407#2408#0" expanded="true" />
                 <element signature="e#2492#2493#0" expanded="true" />
                 <element signature="e#2519#2520#0" expanded="true" />
@@ -2507,10 +2506,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/xinxin/firstcodeutil/util/HttpUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71090907">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6490909">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
           <folding>
-            <element signature="e#744#2408#0" expanded="true" />
             <element signature="e#2407#2408#0" expanded="true" />
             <element signature="e#2492#2493#0" expanded="true" />
             <element signature="e#2519#2520#0" expanded="true" />
