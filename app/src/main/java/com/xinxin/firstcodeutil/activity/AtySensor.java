@@ -6,6 +6,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
@@ -40,6 +41,7 @@ public class AtySensor extends BaseActivity implements View.OnClickListener {
         sensor_compass = (Button) findViewById(R.id.sensor_compass);
         sensor_light = (Button) findViewById(R.id.sensor_light);
         lightLevel = (TextView) findViewById(R.id.sensor_light_level);
+        compassImg = (ImageView) findViewById(R.id.compass_img);
 
         sensor_accelerometer.setOnClickListener(this);
         sensor_compass.setOnClickListener(this);
@@ -94,11 +96,15 @@ public class AtySensor extends BaseActivity implements View.OnClickListener {
 
         @Override
         public void onSensorChanged(SensorEvent event) {
+
             // 加速度可能会是负值，所以要取它们的绝对值
             float xValue = Math.abs(event.values[0]);
             float yValue = Math.abs(event.values[1]);
             float zValue = Math.abs(event.values[2]);
-            if (xValue > 15 || yValue > 15 || zValue > 15) {
+            Log.d("Sensor---------------","摇一摇"+xValue+"  " + yValue+"  "+zValue);
+            // 之前是大于15
+            //  但是根据打印来看，摇动的幅度需要很大，应该是不合理的，改成12也需要比较大的幅度；
+            if (xValue > 12 || yValue > 12 || zValue > 12) {
                 // 认为用户摇动了手机，触发摇一摇逻辑
                 Toast.makeText(AtySensor.this, "摇一摇", Toast.LENGTH_SHORT).show();
             }
@@ -148,16 +154,23 @@ public class AtySensor extends BaseActivity implements View.OnClickListener {
             SensorManager.getRotationMatrix(R, null, accelerometerValues,
                     magneticValues);
             SensorManager.getOrientation(R, values);
+            Log.d("Sensor++++++++++", "values[0] is " + Math.toDegrees(values[0]));
             float rotateDegree = -(float) Math.toDegrees(values[0]);
-            if (Math.abs(rotateDegree - lastRotateDegree) > 1) {
-                RotateAnimation animation = new RotateAnimation(
-                        lastRotateDegree, rotateDegree,
-                        Animation.RELATIVE_TO_SELF, 0.5f,
-                        Animation.RELATIVE_TO_SELF, 0.5f);
-                animation.setFillAfter(true);
-                compassImg.startAnimation(animation);
-                lastRotateDegree = rotateDegree;
+            try {
+                if (Math.abs(rotateDegree - lastRotateDegree) > 1) {
+                    RotateAnimation animation = new RotateAnimation(
+                            lastRotateDegree, rotateDegree,
+                            Animation.RELATIVE_TO_SELF, 0.5f,
+                            Animation.RELATIVE_TO_SELF, 0.5f);
+                    animation.setFillAfter(true);
+                    compassImg.startAnimation(animation);
+                    lastRotateDegree = rotateDegree;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
+
+
         }
 
         @Override
