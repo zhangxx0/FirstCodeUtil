@@ -1,5 +1,10 @@
 package com.xinxin.firstcodeutil.util;
 
+import android.content.Context;
+import android.widget.Toast;
+
+import com.xinxin.firstcodeutil.MyApplication;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -14,7 +19,13 @@ import java.net.URL;
  */
 public class HttpUtil {
 
-    public static void sendHttpRequest(final String address,final HttpCallbackListener listener) {
+    public static void sendHttpRequest(final Context context,final String address,final HttpCallbackListener listener) {
+
+        if (!isNetworkAvailable()) {
+            // 使用MyApplication获取context；
+            Toast.makeText(MyApplication.getContext(), "network is unavailable", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         new Thread(new Runnable() {
             @Override
@@ -31,7 +42,7 @@ public class HttpUtil {
                     connection.setDoOutput(true);
 
                     InputStream in = connection.getInputStream();
-                    BufferedReader reader = new BufferedReader(new InputStreamReader(in,"utf-8"));
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(in, "utf-8"));
                     StringBuilder response = new StringBuilder();
                     String line;
                     while ((line = reader.readLine()) != null) {
@@ -60,5 +71,10 @@ public class HttpUtil {
         }).start();
 
 
+    }
+
+    // 判断网络是否可用
+    private static boolean isNetworkAvailable() {
+        return true;
     }
 }
