@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xinxin.firstcodeutil" >
+    package="com.xinxin.firstcodeutil">
 
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
-    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <!--百度地图权限 （少两个）-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
@@ -30,14 +30,14 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
 
         <!--百度地图密钥-->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="iHA6cUg2i0mlFzkQoDEXghjE" />
 
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,67 +45,70 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.AtySecond"/>
-        <activity android:name=".activity.AtyCustomTitle"/>
-        <activity android:name=".activity.AtyTalkPage"/>
-        <activity android:name=".activity.AtyFunctions"/>
-        <activity android:name=".activity.AtyFragment"/>
-        <activity android:name=".activity.AtyNewsContent"/>
-        <activity android:name=".activity.AtyBroadcast"/>
-        <activity android:name=".activity.AtyOfflineLogin"/>
-        <activity android:name=".activity.AtyOfflineMain"/>
-        <activity android:name=".activity.AtyStorage"/>
-        <activity android:name=".activity.AtyStorageFile"/>
-        <activity android:name=".activity.AtyStorageSharedPreferences"/>
-        <activity android:name=".activity.AtyProvider"/>
-        <activity android:name=".activity.AtyProviderContacts"/>
-        <activity android:name=".activity.AtyMedia"/>
-        <activity android:name=".activity.AtyNotification"/>
-        <activity android:name=".activity.AtyNotificationPending"/>
-        <activity android:name=".activity.AtySms"/>
-        <activity android:name=".activity.AtyAudio"/>
-        <activity android:name=".activity.AtyVideo"/>
-        <activity android:name=".activity.AtyChoosePic"/>
+        <activity android:name=".activity.AtySecond" />
+        <activity android:name=".activity.AtyCustomTitle" />
+        <activity android:name=".activity.AtyTalkPage" />
+        <activity android:name=".activity.AtyFunctions" />
+        <activity android:name=".activity.AtyFragment" />
+        <activity android:name=".activity.AtyNewsContent" />
+        <activity android:name=".activity.AtyBroadcast" />
+        <activity android:name=".activity.AtyOfflineLogin" />
+        <activity android:name=".activity.AtyOfflineMain" />
+        <activity android:name=".activity.AtyStorage" />
+        <activity android:name=".activity.AtyStorageFile" />
+        <activity android:name=".activity.AtyStorageSharedPreferences" />
+        <activity android:name=".activity.AtyProvider" />
+        <activity android:name=".activity.AtyProviderContacts" />
+        <activity android:name=".activity.AtyMedia" />
+        <activity android:name=".activity.AtyNotification" />
+        <activity android:name=".activity.AtyNotificationPending" />
+        <activity android:name=".activity.AtySms" />
+        <activity android:name=".activity.AtyAudio" />
+        <activity android:name=".activity.AtyVideo" />
+        <activity android:name=".activity.AtyChoosePic" />
 
-        <activity android:name=".activity.AtyService"/>
-        <activity android:name=".activity.AtyHandler"/>
+        <activity android:name=".activity.AtyService" />
+        <activity android:name=".activity.AtyHandler" />
 
-        <activity android:name=".activity.AtyWeb"/>
-        <activity android:name=".activity.AtyWebView"/>
-        <activity android:name=".activity.AtyWebNetwork"/>
+        <activity android:name=".activity.AtyWeb" />
+        <activity android:name=".activity.AtyWebView" />
+        <activity android:name=".activity.AtyWebNetwork" />
 
-        <activity android:name=".activity.AtyLocation"/>
-        <activity android:name=".activity.AtyLocationPosition"/>
-        <activity android:name=".activity.AtyLocationBaiduMap"/>
+        <activity android:name=".activity.AtyLocation" />
+        <activity android:name=".activity.AtyLocationPosition" />
+        <activity android:name=".activity.AtyLocationBaiduMap" />
 
-        <activity android:name=".activity.AtySensor"/>
+        <activity android:name=".activity.AtySensor" />
+
+        <activity android:name=".activity.AtyCharts" />
+        <activity android:name=".activity.AtyChartPie" />
+        <activity android:name=".activity.AtyChartPiePaotuan" />
 
         <!--注册广播接收器-->
         <receiver android:name=".broadcastreceiver.MyBroadcastReceiver">
             <intent-filter android:priority="100">
-                <action android:name="com.xinxin.firstcodeutil.broadcastreceiver.MY_BROADCAST"/>
+                <action android:name="com.xinxin.firstcodeutil.broadcastreceiver.MY_BROADCAST" />
             </intent-filter>
         </receiver>
         <!--强制下线广播接收器-->
         <receiver android:name=".broadcastreceiver.ForceOfflineReceiver">
             <intent-filter>
-                <action android:name="com.xinxin.firstcodeutil.broadcastreceiver.FORCE_ONLINE"/>
+                <action android:name="com.xinxin.firstcodeutil.broadcastreceiver.FORCE_ONLINE" />
             </intent-filter>
         </receiver>
         <!--定时Service接收器-->
-        <receiver android:name=".broadcastreceiver.AlarmReceiver"/>
+        <receiver android:name=".broadcastreceiver.AlarmReceiver" />
 
         <!--SQLite数据库 内容提供器-->
         <provider
-            android:authorities="com.xinxin.firstcodeutil.provider"
             android:name="com.xinxin.firstcodeutil.provider.DatabaseProvider"
-            android:exported="true">
-        </provider>
+            android:authorities="com.xinxin.firstcodeutil.provider"
+            android:exported="true"></provider>
 
         <!--注册service-->
-        <service android:name=".service.MyService"/>
-        <service android:name=".service.MyIntentService"/>
-        <service android:name=".service.LongRunningService"/>
+        <service android:name=".service.MyService" />
+        <service android:name=".service.MyIntentService" />
+        <service android:name=".service.LongRunningService" />
 
 
     </application>

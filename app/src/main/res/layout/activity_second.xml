@@ -41,6 +41,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ActionBar"/>
+    <Button
+        android:id="@+id/chartsbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="图表"/>
 
     <Button
         android:id="@+id/exitapp"

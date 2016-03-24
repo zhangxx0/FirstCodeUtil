@@ -21,7 +21,7 @@ import com.xinxin.firstcodeutil.activitycollector.ActivityCollector;
 public class AtySecond extends BaseActivity implements View.OnClickListener {
 
     // 一键退出按钮,自定义标题栏按钮,聊天页面,
-    private Button exitapp,customviewbtn,talkpagebtn,functionbtn,actionbarbtn;
+    private Button exitapp,customviewbtn,talkpagebtn,functionbtn,actionbarbtn,chartsbtn;
     private TextView fromactivity1;
 
     @Override
@@ -35,11 +35,13 @@ public class AtySecond extends BaseActivity implements View.OnClickListener {
         talkpagebtn = (Button) findViewById(R.id.talkpagebtn);
         functionbtn = (Button) findViewById(R.id.functionbtn);
         actionbarbtn = (Button) findViewById(R.id.actionbarbtn);
+        chartsbtn = (Button) findViewById(R.id.chartsbtn);
         exitapp.setOnClickListener(this);
         customviewbtn.setOnClickListener(this);
         talkpagebtn.setOnClickListener(this);
         functionbtn.setOnClickListener(this);
         actionbarbtn.setOnClickListener(this);
+        chartsbtn.setOnClickListener(this);
 
         Bundle b = getIntent().getExtras();
         Log.d("IntentExtra",b.getString("testStr"));
@@ -64,6 +66,10 @@ public class AtySecond extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.actionbarbtn:
 
+                break;
+            case R.id.chartsbtn:
+                Intent intent3 = new Intent(this, AtyCharts.class);
+                startActivity(intent3);
                 break;
             case R.id.functionbtn:
                 Intent intent2 = new Intent(this,AtyFunctions.class);

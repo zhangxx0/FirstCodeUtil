@@ -31,4 +31,6 @@ dependencies {
     compile files('libs/baidumapapi_radar_v3_7_1.jar')
     compile files('libs/baidumapapi_search_v3_7_1.jar')
     compile files('libs/baidumapapi_util_v3_7_1.jar')
+
+    compile 'com.github.PhilJay:MPAndroidChart:v2.2.3'
 }
