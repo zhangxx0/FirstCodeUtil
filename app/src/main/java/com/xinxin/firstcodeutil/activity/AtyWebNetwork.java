@@ -84,6 +84,7 @@ public class AtyWebNetwork extends BaseActivity implements View.OnClickListener 
 
     private void sendRequestWithHttpUtil() {
         String address = "http://www.baidu.com";
+//        String address = "http://ncw.worldoftanks.cn/zh-cn/community/accounts/1509154099-康恩饭_";
         HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {
             @Override
             public void onFinish(String response) {
