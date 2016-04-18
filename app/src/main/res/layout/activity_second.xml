@@ -48,6 +48,12 @@
         android:text="图表"/>
 
     <Button
+        android:id="@+id/rxjavabtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RxJava" />
+
+    <Button
         android:id="@+id/exitapp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

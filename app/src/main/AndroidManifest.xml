@@ -83,6 +83,7 @@
         <activity android:name=".activity.AtyCharts" />
         <activity android:name=".activity.AtyChartPie" />
         <activity android:name=".activity.AtyChartPiePaotuan" />
+        <activity android:name=".activity.AtyRxjava" />
 
         <!--注册广播接收器-->
         <receiver android:name=".broadcastreceiver.MyBroadcastReceiver">

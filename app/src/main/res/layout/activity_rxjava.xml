@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="RxJava"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/rx_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1:打印字符串数组" />
+
+    <TextView
+        android:id="@+id/rx_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="打印字符串数组展示"
+        android:text="" />
+
+    <Button
+        android:id="@+id/rx_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2:由id取得图片并显示" />
+
+    <ImageView
+        android:id="@+id/rx_img1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
