@@ -52,6 +52,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RxJava" />
+    <Button
+        android:id="@+id/retrofitbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retrofit" />
 
     <Button
         android:id="@+id/exitapp"
