@@ -13,7 +13,7 @@ import com.xinxin.firstcodeutil.R;
  */
 public class AtyWeb extends BaseActivity implements View.OnClickListener {
 
-    private Button web_webview_btn,web_web_btn;
+    private Button web_webview_btn,web_web_btn,web_limit_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,10 @@ public class AtyWeb extends BaseActivity implements View.OnClickListener {
 
         web_webview_btn = (Button) findViewById(R.id.web_webview_btn);
         web_web_btn = (Button) findViewById(R.id.web_web_btn);
+        web_limit_btn = (Button) findViewById(R.id.web_limit_btn);
         web_webview_btn.setOnClickListener(this);
         web_web_btn.setOnClickListener(this);
+        web_limit_btn.setOnClickListener(this);
 
     }
 
@@ -37,6 +39,10 @@ public class AtyWeb extends BaseActivity implements View.OnClickListener {
             case R.id.web_web_btn:
                 Intent i2 = new Intent(this, AtyWebNetwork.class);
                 startActivity(i2);
+                break;
+            case R.id.web_limit_btn:
+                Intent i3 = new Intent(this, AtyWebLimit.class);
+                startActivity(i3);
                 break;
             default:
                 break;

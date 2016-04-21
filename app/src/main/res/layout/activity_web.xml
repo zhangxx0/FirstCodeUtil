@@ -16,4 +16,10 @@
         android:layout_height="wrap_content"
         android:text="访问网络并解析数据"/>
 
+    <Button
+        android:id="@+id/web_limit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="公司网络限制测试" />
+
 </LinearLayout>
