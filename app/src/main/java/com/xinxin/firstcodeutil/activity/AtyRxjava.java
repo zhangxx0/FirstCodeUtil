@@ -1,5 +1,6 @@
 package com.xinxin.firstcodeutil.activity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,7 +26,7 @@ import rx.schedulers.Schedulers;
  */
 public class AtyRxjava extends BaseActivity implements View.OnClickListener {
 
-    private Button rx_btn1, rx_btn2;
+    private Button rx_btn1, rx_btn2,rx_demo;
     private TextView rx_text1;
     private ImageView rx_img1;
 
@@ -38,11 +39,13 @@ public class AtyRxjava extends BaseActivity implements View.OnClickListener {
 
         rx_btn1.setOnClickListener(this);
         rx_btn2.setOnClickListener(this);
+        rx_demo.setOnClickListener(this);
     }
 
     private void initView() {
         rx_btn1 = (Button) findViewById(R.id.rx_btn1);
         rx_btn2 = (Button) findViewById(R.id.rx_btn2);
+        rx_demo = (Button) findViewById(R.id.rx_demo);
         rx_text1 = (TextView) findViewById(R.id.rx_text1);
         rx_img1 = (ImageView) findViewById(R.id.rx_img1);
     }
@@ -58,12 +61,15 @@ public class AtyRxjava extends BaseActivity implements View.OnClickListener {
                 // 由id取得图片并显示
                 showPicById();
                 break;
+            case R.id.rx_demo:
+                Intent intent = new Intent(this, AtyRxJavaDemo.class);
+                startActivity(intent);
+                break;
             default:
                 break;
         }
 
     }
-
 
     private void printStringArray() {
         String[] names = {"name1", "name2", "name3", "name4", "name5"};
@@ -87,9 +93,9 @@ public class AtyRxjava extends BaseActivity implements View.OnClickListener {
                 subscriber.onCompleted();
             }
         })
-        .subscribeOn(Schedulers.io()) // 指定 subscribe() 发生在 IO 线程
-        .observeOn(AndroidSchedulers.mainThread()) // 指定 Subscriber 的回调发生在主线程
-        .subscribe(new Observer<Drawable>() {
+                .subscribeOn(Schedulers.io()) // 指定 subscribe() 发生在 IO 线程
+                .observeOn(AndroidSchedulers.mainThread()) // 指定 Subscriber 的回调发生在主线程
+                .subscribe(new Observer<Drawable>() {
                     @Override
                     public void onCompleted() {
                         Toast.makeText(AtyRxjava.this, "Complete!", Toast.LENGTH_SHORT).show();

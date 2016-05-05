@@ -37,15 +37,11 @@
 
 
     <Button
-        android:id="@+id/rx_map"
+        android:id="@+id/rx_demo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="3:变换 map"/>
-    <Button
-        android:id="@+id/rx_flatmap"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="4:变换 flatmap"/>
+        android:text="RxJava Demo"/>
+
 
 
 
