@@ -32,7 +32,21 @@
 
     <ImageView
         android:id="@+id/rx_img1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/rx_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3:变换 map"/>
+    <Button
+        android:id="@+id/rx_flatmap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4:变换 flatmap"/>
+
+
 
 </LinearLayout>
