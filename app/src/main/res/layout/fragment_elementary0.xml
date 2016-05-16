@@ -19,7 +19,7 @@
                 android:id="@+id/searchRb1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="可爱2" />
+                android:text="可爱" />
 
             <android.support.v7.widget.AppCompatRadioButton
                 android:id="@+id/searchRb2"
@@ -31,7 +31,7 @@
                 android:id="@+id/searchRb3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="在下2" />
+                android:text="在下" />
 
             <android.support.v7.widget.AppCompatRadioButton
                 android:id="@+id/searchRb4"
